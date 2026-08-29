@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Updraft — Support</title>
+<meta name="description" content="Support for Updraft, a flight recorder and logbook for glider pilots.">
+<link rel="stylesheet" href="style.css">
+</head><body>
+
+<div class="top"><div class="in">
+  <a class="brand" href="/">Updraft</a>
+  <span class="tag">Flight recorder &amp; logbook for glider pilots</span>
+  <nav><a href="/">Support</a><a href="/privacy.html">Privacy</a></nav>
+</div></div>
+
+<main>
+<h1>Support</h1>
+<p class="upd">Updraft 1.0.0 · Currently in TestFlight beta</p>
+
+<p>Updraft turns an iPhone into a flight recorder for glider pilots. Put the phone in the cockpit, fly, and it hands the flight back afterwards: barogram, track over real terrain, detected climbs, wind worked out from circle drift, a landing breakdown, and a standard IGC file.</p>
+
+<div class="note">
+<p><b>Not a certified instrument. Do not fly on it. Look outside.</b></p>
+<p>Updraft is a recorder and a ground-side debrief tool. It is not a navigation or primary-instrument app, and it is never a substitute for the aircraft's own instruments, your instructor, or the regulations you fly under.</p>
+</div>
+
+<h2>Getting in touch</h2>
+<p>The fastest way to reach me is Instagram: <a href="https://instagram.com/updraft.app">@updraft.app</a>. Bug reports, feature requests, and "this number looks wrong" messages are all welcome — especially the last one.</p>
+<p>If you are on the TestFlight beta, you can also send feedback straight from the TestFlight app, which includes a screenshot and device details automatically. That is the most useful kind of report.</p>
+
+<h2>Known issues</h2>
+<ul>
+<li><b>Landing time marks the stop, not the touchdown.</b> Rollout distance therefore reads too short and approach speed too low, because the average includes the ground roll. Being worked on.</li>
+<li><b>Paid tiers are not switched on.</b> During the beta everything is unlocked. Prices show as "—" and purchase buttons do nothing.</li>
+<li><b>Live traffic is unavailable.</b> It needs a Flightradar24 API plan that is not active. The app tells you so rather than showing an empty sky.</li>
+<li><b>Launch detection has only seen aerotows.</b> If you launch by winch, bungee or self-launch and it fails to detect, that is genuinely useful to hear about.</li>
+</ul>
+
+<h2>Common questions</h2>
+
+<h2 style="font-size:17px">Why does it show ground speed instead of airspeed?</h2>
+<p>Because a phone has no pitot tube and cannot measure airspeed. Showing a made-up airspeed would be worse than showing none, so the dial says ground speed and labels itself honestly.</p>
+
+<h2 style="font-size:17px">Why does the attitude display say DRIFT?</h2>
+<p>The attitude reference is gyro-led and needs calibration. When it has been coasting on the gyroscope without correction it says DRIFT, because at that point it is no longer trustworthy. It never derives attitude from the accelerometer — in a coordinated turn that reads level at 45° of bank.</p>
+
+<h2 style="font-size:17px">Do my flights leave my phone?</h2>
+<p>No. Flights are stored on the device and stay there unless you export them yourself. See the <a href="/privacy.html">privacy policy</a> for the full detail.</p>
+
+<h2 style="font-size:17px">Can I get my flights out?</h2>
+<p>Yes. Every flight exports as a standard IGC file that opens in SeeYou, WeGlide or XCSoar, and the logbook exports as CSV. Your data is yours.</p>
+
+<footer>
+<p>Updraft is built by Ethan Paschkes, a student glider pilot.<br>
+<a href="/privacy.html">Privacy policy</a> · <a href="https://instagram.com/updraft.app">@updraft.app</a></p>
+</footer>
+</main>
+</body></html>
