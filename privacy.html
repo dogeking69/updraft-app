@@ -1,77 +1,167 @@
 <!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Updraft — Privacy Policy</title>
-<meta name="description" content="Privacy policy for Updraft, a flight recorder and logbook for glider pilots.">
-<link rel="stylesheet" href="style.css">
-</head><body>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Updraft</title>
+<style>
+  :root {
+    --bg: #F4F8FD; --surface: #FFFFFF; --ink: #0B2E58; --muted: #3D6491;
+    --faint: #6486AC; --accent: #1668E3; --rule: #DCE8F5;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 48px 22px 96px; }
+  header { border-bottom: 1px solid var(--rule); padding-bottom: 22px; margin-bottom: 36px; }
+  .mark { font-weight: 800; letter-spacing: 2.5px; font-size: 13px; color: var(--accent); }
+  h1 { font-size: 34px; line-height: 1.15; margin: 14px 0 6px; letter-spacing: -0.4px; }
+  .updated { color: var(--faint); font-size: 14px; margin: 0; }
+  h2 { font-size: 21px; margin: 40px 0 10px; letter-spacing: -0.2px; }
+  h3 { font-size: 16px; margin: 26px 0 6px; color: var(--muted); }
+  p, li { color: var(--muted); }
+  li { margin-bottom: 7px; }
+  strong { color: var(--ink); }
+  a { color: var(--accent); }
+  .lede { font-size: 18px; color: var(--ink); }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14.5px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  th { color: var(--ink); font-size: 12px; text-transform: uppercase; letter-spacing: 0.8px; }
+  td { color: var(--muted); }
+  .card {
+    background: var(--surface); border: 1px solid var(--rule); border-radius: 14px;
+    padding: 18px 20px; margin: 22px 0;
+  }
+  .card p:last-child { margin-bottom: 0; }
+  .card p:first-child { margin-top: 0; }
+  footer { margin-top: 56px; padding-top: 22px; border-top: 1px solid var(--rule); color: var(--faint); font-size: 14px; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #061422; --surface: #0E2437; --ink: #EAF3FB; --muted: #AFC9DF;
+            --faint: #7C9BB7; --accent: #6FB4FF; --rule: #20455F; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="mark">UPDRAFT</div>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated 2 September 2026</p>
+</header>
 
-<div class="top"><div class="in">
-  <a class="brand" href="/">Updraft</a>
-  <span class="tag">Flight recorder &amp; logbook for glider pilots</span>
-  <nav><a href="/">Support</a><a href="/privacy.html">Privacy</a></nav>
-</div></div>
+<p class="lede">Updraft records your flight using the sensors already in your
+phone. That recording belongs to you and stays on your phone unless you choose
+to sign in or export it.</p>
 
-<main>
-<h1>Privacy Policy</h1>
-<p class="upd">Last updated 29 August 2026 · Updraft 1.0.0</p>
-
-<div class="note">
-<p><b>The short version.</b> Updraft has no account, no ads and no analytics. Your flights are stored on your phone and stay there unless you export them yourself. Nothing you record is sent to me, and I never see it.</p>
-</div>
-
-<h2>What Updraft records</h2>
-<p>To do its job, Updraft reads the following from your phone while you are using it:</p>
+<h2>The short version</h2>
 <ul>
-<li><b>Location.</b> GPS position, altitude and speed, used to record the track of your flight.</li>
-<li><b>Barometer and motion sensors.</b> Pressure altitude, acceleration and rotation, used for the altitude trace, the climb rate and the G reading.</li>
-<li><b>Microphone.</b> Only if you start an instructor debrief recording. Used to capture cockpit dialogue so it can be transcribed.</li>
-<li><b>Speech recognition.</b> Applied to that recorded audio to turn it into text for your debrief.</li>
-<li><b>Photo library.</b> Only when you choose to save an exported flight file or a debrief screenshot.</li>
+  <li>Your flights are stored <strong>on your device</strong>. An account is optional and the app works fully without one.</li>
+  <li>There is <strong>no advertising, no analytics and no tracking</strong> of any kind. Nothing you do in Updraft is profiled or sold.</li>
+  <li>Cockpit audio is transcribed <strong>on your phone</strong>. It is never uploaded unless you switch that on for a specific debrief.</li>
+  <li>You can <strong>delete your cloud account from inside the app</strong>, and it takes the synced data with it.</li>
 </ul>
 
-<h2>Where it goes</h2>
-<p><b>Onto your phone, and nowhere else.</b> Flights, tracks, audio recordings and debriefs are written to a database on the device. They are not uploaded, backed up to me, or shared with anyone.</p>
-<p>Audio from an instructor debrief is transcribed <b>on the device</b> using Apple's on-device speech recognition. The audio does not leave your phone, and it is not sent to Apple or to me for processing.</p>
-<p>You can delete any flight, and its track, audio and debrief go with it.</p>
+<h2>What Updraft stores on your device</h2>
+<p>Recording a flight writes a position fix roughly once a second to a database
+on the phone: time, latitude and longitude, barometric and GPS altitude, ground
+speed, track and G load. Alongside it Updraft keeps your logbook entries, your
+pilot profile and home airfield, your instrument panel layout, your unit
+preferences, drill scores, and any debrief audio you record and its transcript.</p>
+<p>None of this leaves the phone on its own. Deleting the app deletes all of it.</p>
 
-<h2>What does leave your phone</h2>
-<p>Three things involve a network request, and it is worth being precise about them:</p>
-<ul>
-<li><b>Map and terrain imagery.</b> When you view your flight over 3D terrain or satellite imagery, the app requests map tiles for that area. The tile server necessarily sees the approximate area you are looking at, in the same way any map app works. It does not receive your flight, your track, or an identifier for you.</li>
-<li><b>Weather forecasts.</b> The soaring forecast requests conditions for a location from Open-Meteo. No account, no API key, no identifier.</li>
-<li><b>Live airspace and traffic</b> (Max tier, when enabled). Requests advisory airspace and transponder data for the area around you.</li>
-</ul>
-<p>None of these requests carry a name, an account, an advertising identifier, or your stored flights.</p>
+<h2>What leaves your device, and when</h2>
+
+<h3>Only if you sign in</h3>
+<p>An account is optional. Recording, the logbook, flight reports, IGC export and
+the drills all work while signed out. If you do sign in — with Sign in with Apple
+or an email link — Updraft can back your flying up and connect you to a club.
+What syncs then:</p>
+<table>
+  <tr><th>Data</th><th>Why</th></tr>
+  <tr><td>Your name and email address</td><td>To identify your account. With Sign in with Apple you may choose to hide your real address, and Updraft only ever sees the relay address.</td></tr>
+  <tr><td>An account identifier and a device identifier</td><td>To keep your data yours, and to check that a device submitting a flight for ranking is a genuine one.</td></tr>
+  <tr><td>Flights, including precise position traces and IGC files</td><td>So a lost or replaced phone does not cost you your logbook.</td></tr>
+  <tr><td>Flight notes and debrief transcripts</td><td>So a debrief survives with the flight it belongs to.</td></tr>
+  <tr><td>Recorded cockpit audio</td><td><strong>Only when you explicitly opt a debrief in.</strong> It is off by default and set per debrief, not once for everything.</td></tr>
+  <tr><td>Flight school progress, club membership and leaderboard entries</td><td>So an instructor or club can see the progress you chose to share.</td></tr>
+</table>
+<p>Synced data is held in Updraft's own database, hosted by Supabase, and is
+readable only by your account and by people you have explicitly shared it with —
+a club you joined, or a leaderboard you entered.</p>
+
+<h3>Services Updraft contacts while you use it</h3>
+<p>Some features need information from the internet. Where a request has to say
+roughly where you are, that is listed here. None of these services are given your
+name, your email or your account.</p>
+<table>
+  <tr><th>Service</th><th>What it receives</th><th>What it is for</th></tr>
+  <tr><td>Open-Meteo</td><td>The coordinates of your home airfield</td><td>The soaring forecast and today's conditions</td></tr>
+  <tr><td>OpenAIP</td><td>The area you are flying in</td><td>Nearby airspace</td></tr>
+  <tr><td>EOX and AWS terrain tiles</td><td>The part of the map you are looking at</td><td>Satellite imagery and terrain for the map and globe</td></tr>
+  <tr><td>unpkg</td><td>Nothing but the request itself</td><td>Loads the 3D globe's rendering library</td></tr>
+  <tr><td>Flightradar24</td><td>The area you are flying in</td><td>Nearby transponder-equipped traffic, in the Max live layer</td></tr>
+  <tr><td>Apple</td><td>Handled entirely by Apple</td><td>Sign in with Apple, subscriptions, and App Attest device checks</td></tr>
+</table>
+
+<h2>Cockpit audio and transcription</h2>
+<p>If you record a debrief, the audio is captured on your phone and transcribed
+<strong>on your phone</strong>, using Apple's on-device speech recognition. The
+recording is not sent anywhere to be turned into text.</p>
+<p>The resulting transcript syncs with the flight if you are signed in. The audio
+itself is uploaded only if you turn that on for that debrief.</p>
 
 <h2>Purchases</h2>
-<p>Subscriptions are processed entirely by Apple. Updraft receives only whether a subscription is currently active — never your name, your payment details, or your Apple ID. Apple's own privacy policy governs the transaction.</p>
+<p>Updraft Pro and Updraft Max are auto-renewing subscriptions sold through
+Apple. Apple processes the payment; Updraft never sees your payment details and
+does not receive or store your purchase history. Manage or cancel a subscription
+in your Apple Account settings.</p>
 
-<h2>What Updraft does not do</h2>
-<ul>
-<li>No user accounts and no sign-in.</li>
-<li>No advertising, and no advertising identifiers.</li>
-<li>No analytics or crash-reporting SDKs.</li>
-<li>No tracking across apps or websites.</li>
-<li>No selling or sharing of data with third parties, because there is no data collected to sell.</li>
-</ul>
+<h2>Deleting your data</h2>
+<p>In the app: <strong>Customize → Account and plan → Account and sync → Delete
+cloud account</strong>. This permanently deletes the account and the cloud copies
+of your flights, artifacts, club memberships, school progress and leaderboard
+entries.</p>
+<div class="card">
+  <p><strong>Two things worth knowing.</strong> Deleting the cloud account does
+  not delete the flights held on your phone — those are yours and stay until you
+  delete them in the logbook or remove the app. And deleting the account does not
+  cancel an Apple subscription; subscriptions are cancelled through Apple.</p>
+</div>
 
-<h2>Children</h2>
-<p>Updraft is rated 4+ and collects no personal information from anyone, of any age. It has no account system and no way to identify a user.</p>
+<h2>Young pilots</h2>
+<p>You can fly a glider solo at 14 in many countries, and Updraft is built partly
+for people learning at that age. It contains no advertising, no tracking and no
+open web content. An account is never required to use it, and we ask for no more
+than the account itself needs. If you are under the age at which you can agree to
+this yourself, ask a parent or guardian before creating an account.</p>
 
-<h2>Your control</h2>
-<p>Every permission Updraft asks for can be refused or revoked in iOS Settings, and the app degrades honestly rather than pretending. Refusing location means flights cannot be recorded; refusing the microphone means the debrief feature is unavailable. Nothing is silently worked around.</p>
-<p>To remove everything, delete the app. All flights, tracks, audio and debriefs are stored inside it and go with it.</p>
+<h2>How long data is kept</h2>
+<p>Data on your phone is kept until you delete it. Synced data is kept while your
+account exists and is removed when you delete the account. Server logs used to
+keep the service running are short-lived and are not used to build any profile of
+you.</p>
+
+<h2>Your rights</h2>
+<p>You can see your data in the app, export it as IGC or CSV at any time, and
+delete it — locally in the logbook, and in the cloud with the account deletion
+above. If you would like a copy of what is held for your account, or want it
+removed and cannot reach the app, write to us and we will do it.</p>
 
 <h2>Changes</h2>
-<p>If this policy changes, the date at the top changes with it. Material changes will be noted in the app's release notes.</p>
+<p>If this policy changes in a way that affects what is collected or where it
+goes, the date at the top will change and the app will say so.</p>
 
 <h2>Contact</h2>
-<p>Questions about privacy, or anything else: <a href="https://instagram.com/updraft.app">@updraft.app</a> on Instagram.</p>
+<p>Questions about privacy, or a request about your data:
+<a href="mailto:ethan.paschkes@gmail.com">ethan.paschkes@gmail.com</a>.</p>
 
 <footer>
-<p>Updraft is built by Ethan Paschkes, a student glider pilot.<br>
-<a href="/">Support</a> · <a href="https://instagram.com/updraft.app">@updraft.app</a></p>
+  Updraft is not a certified instrument. Do not fly on it. Look outside.<br>
+  © 2026 Ethan Paschkes
 </footer>
-</main>
-</body></html>
+</div>
+</body>
+</html>

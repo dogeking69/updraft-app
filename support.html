@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support — Updraft</title>
+<style>
+  :root {
+    --bg: #F4F8FD; --surface: #FFFFFF; --ink: #0B2E58; --muted: #3D6491;
+    --faint: #6486AC; --accent: #1668E3; --rule: #DCE8F5; --warnbg: rgba(138,80,16,0.08); --warn: #8A5010;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 48px 22px 96px; }
+  header { border-bottom: 1px solid var(--rule); padding-bottom: 22px; margin-bottom: 36px; }
+  .mark { font-weight: 800; letter-spacing: 2.5px; font-size: 13px; color: var(--accent); }
+  h1 { font-size: 34px; line-height: 1.15; margin: 14px 0 6px; letter-spacing: -0.4px; }
+  h2 { font-size: 21px; margin: 40px 0 10px; letter-spacing: -0.2px; }
+  h3 { font-size: 16.5px; margin: 26px 0 4px; }
+  p, li { color: var(--muted); }
+  li { margin-bottom: 7px; }
+  strong { color: var(--ink); }
+  a { color: var(--accent); }
+  .lede { font-size: 18px; color: var(--ink); }
+  .card {
+    background: var(--surface); border: 1px solid var(--rule); border-radius: 14px;
+    padding: 18px 20px; margin: 20px 0;
+  }
+  .card p:last-child { margin-bottom: 0; }
+  .card h3 { margin-top: 0; }
+  .safety { background: var(--warnbg); border-color: transparent; border-left: 3px solid var(--warn); border-radius: 6px; }
+  .safety strong { color: var(--warn); }
+  .contact { text-align: center; padding: 26px 20px; }
+  .contact a { font-size: 19px; font-weight: 700; text-decoration: none; }
+  footer { margin-top: 56px; padding-top: 22px; border-top: 1px solid var(--rule); color: var(--faint); font-size: 14px; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #061422; --surface: #0E2437; --ink: #EAF3FB; --muted: #AFC9DF;
+            --faint: #7C9BB7; --accent: #6FB4FF; --rule: #20455F;
+            --warnbg: rgba(240,178,101,0.12); --warn: #F0B265; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="mark">UPDRAFT</div>
+  <h1>Support</h1>
+</header>
+
+<p class="lede">Something not working, or a number that does not look right?
+Write to us — a real person reads it.</p>
+
+<div class="card contact">
+  <a href="mailto:ethan.paschkes@gmail.com">ethan.paschkes@gmail.com</a>
+</div>
+
+<div class="card safety">
+  <p><strong>Updraft is not a certified instrument.</strong> It shows ground
+  speed, not airspeed, and its attitude display is a reference that needs
+  calibration and says DRIFT when it can no longer be trusted. Do not fly on it.
+  Look outside and follow your instructor.</p>
+</div>
+
+<h2>Common questions</h2>
+
+<h3>My flight was not detected as a launch</h3>
+<p>Updraft finds the launch from a sustained climb, which needs the barometer to
+be updating. If the trace looks flat, check that Updraft had motion permission
+and that the phone was not in a case that blocks the pressure port. You can
+always add the flight by hand: <strong>Logbook → Add by hand</strong>.</p>
+
+<h3>My altitude reads zero, or the barogram is flat</h3>
+<p>The phone's barometer is what gives Updraft real height. Some devices do not
+have one, and no simulator does. Recording still works from GPS, which is noisier
+— the Sensors tab tells you exactly which sensors this phone has and whether it
+can record properly.</p>
+
+<h3>The recording stopped when I put the phone in my pocket</h3>
+<p>iOS suspends an app in the background unless it has permission to keep using
+location. Allow location <strong>Always</strong> and Updraft will keep the trace
+alive with the screen off. Gaps are never drawn through — the report shows you
+exactly how much of the flight was recorded.</p>
+
+<h3>It says my flight had no climbs</h3>
+<p>Updraft only counts a climb as a thermal if you actually circled in it. A
+winch launch or an aerotow is not a thermal, so a training flight that towed up
+and glided down will honestly report no sustained climbs. That is the app being
+accurate, not broken.</p>
+
+<h3>How do I get my flights out?</h3>
+<p>Every flight exports as a standard <strong>IGC</strong> file, and the whole
+logbook exports as <strong>CSV</strong>. Both are yours, work in SeeYou and
+XCSoar, and need no account.</p>
+
+<h3>How do I cancel a subscription?</h3>
+<p>Subscriptions are billed by Apple and cancelled in your Apple Account
+settings: open <strong>Settings</strong> on your iPhone, tap your name, then
+<strong>Subscriptions</strong>. You can also reach Apple's sheet from
+<strong>Customize → Account and plan</strong> inside Updraft. Cancelling stops
+future renewals and you keep access until the period you paid for ends.</p>
+
+<h3>Do I need an account?</h3>
+<p>No. Recording, the logbook, reports, the drills and IGC export all work signed
+out and always will. An account adds backup, clubs, flight school and
+leaderboards.</p>
+
+<h3>How do I delete my account and data?</h3>
+<p><strong>Customize → Account and plan → Account and sync → Delete cloud
+account.</strong> That removes the account and everything synced to it. Flights
+on the phone stay until you delete them in the logbook. Deleting the account does
+not cancel an Apple subscription — do that through Apple.</p>
+
+<h3>I found a number I do not believe</h3>
+<p>Please tell us, and say which flight. Every flight can export a full debug
+dump — <strong>open the flight → Export debug dump</strong> — which contains
+every fix and every reading. Attaching it to an email is the fastest way to get a
+wrong number fixed.</p>
+
+<h2>Reporting a bug</h2>
+<p>Useful things to include: your phone model and iOS version, what you expected,
+what happened, and the debug dump for the flight if it relates to one.</p>
+
+<footer>
+  © 2026 Ethan Paschkes · <a href="privacy.html">Privacy Policy</a>
+</footer>
+</div>
+</body>
+</html>
